@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 95.0.4638.54 / macOS 10.15.7" tests="4" failures="1" skipped="0" errors="1" time="54.363" timestamp="Mon, 01 Nov 2021 22:51:21 GMT" >
+  <testcase classname="Login feature test" name="As a user, I should be able to log in successfully by providing valid credentials" time="10.686">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should be able to create a new project, choose any color you like and add it to favorites successfully" time="5.634">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should be able to create a task with Today as the due date successfully" time="11.935">
+  </testcase>
+  <testcase classname="Login feature test" name="As a user, I should be able to delete every task created after your tests successfully" time="26.055">
+    <failure>
+    <![CDATA[
+      1) The specified selector does not match any element in the DOM tree.
+
+          > | Selector('button[class="item_action item_actions_more"]')
+
+         Browser: Chrome 95.0.4638.54 / macOS 10.15.7
+
+            52 |    }
+            53 |
+            54 |    async deleteTask(){
+            55 |        await t.click(this.inboxLeftMenu)
+            56 |        await t.click(this.tasklist)
+          > 57 |        await t.click(this.taskOptions)
+            58 |        await t.click(this.taskDelete)
+            59 |        await t.click(this.taskDeleteButton)
+            60 |    }
+            61 |
+            62 |    async createProject(projectname){
+
+            at <anonymous>
+      (/Users/eva.padilla/FrontEnd_Deliverable_Feedback_TaskPages/pom/pages/ActionPage.js:57:17)
+            at asyncGeneratorStep
+      (/Users/eva.padilla/FrontEnd_Deliverable_Feedback_TaskPages/pom/pages/ActionPage.js:2:147)
+            at _next
+      (/Users/eva.padilla/FrontEnd_Deliverable_Feedback_TaskPages/pom/pages/ActionPage.js:2:485)
+    ]]>
+    </failure>
+  </testcase>
+  <system-out>
+  <![CDATA[
+    Warnings (1):
+    --
+      The "src", "browsers", and "filter" options from the configuration file will be ignored.
+  ]]>
+  </system-out>
+</testsuite>
