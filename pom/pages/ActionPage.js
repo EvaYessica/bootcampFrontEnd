@@ -1,11 +1,11 @@
 import {Selector, t} from 'testcafe'
 import { TASK } from '../data/Constants'
 
-class ActionPages{
+class ActionPage{
     constructor(){
         //Login selectors
-        this.userErrorMessage = Selector('div[class="error_msg"]').withText('Wrong email or password.')
-        this.blankErrorMessage = Selector('div[class="error_msg"]').withText('Invalid email address.')
+        this.userErrorMessage = Selector('.error_msg').withText('Wrong email or password.')
+        this.blankErrorMessage = Selector('.error_msg').withText('Invalid email address.')
         
         //Task selectors
         this.leftMenu = Selector('span[class="item_content"]').withText('Today')
@@ -69,4 +69,4 @@ class ActionPages{
     }
 }
 
-export default new ActionPages
+export default new ActionPage

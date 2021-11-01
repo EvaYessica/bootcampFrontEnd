@@ -1,4 +1,4 @@
-import ActionPages from '../pages/ActionPages'
+import ActionPage from '../pages/ActionPage'
 import {CREDENTIALS, URLS, PROJECT} from '../data/Constants'
 import { STANDARD_USER } from '../data/Roles'
 
@@ -10,7 +10,7 @@ fixture('Login feature test')
 
 test('As a user, I should be able to create a new project, choose any color you like and add it to favorites successfully', async t => {
     //await t.useRole(STANDARD_USER)
-    await ActionPages.createProject(PROJECT.PROJECT_NAME)
-    await t .expect(ActionPages.verifyProject.innerText).contains(PROJECT.PROJECT_NAME)
+    await ActionPage.createProject(PROJECT.PROJECT_NAME)
+    await t .expect(ActionPage.verifyProject.innerText).contains(PROJECT.PROJECT_NAME)
 })
 

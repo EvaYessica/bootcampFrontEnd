@@ -1,6 +1,6 @@
 import {Selector, t } from 'testcafe'
 
-class LoginPages{
+class LoginPage{
     constructor(){
         this.usernameInput = Selector('#email')
         this.passwordInput = Selector('#password')
@@ -9,12 +9,14 @@ class LoginPages{
     }
 
     async submitLoginForm(username, password){
-    await t
-    .click(this.showLogin)
-    .typeText(this.usernameInput, username)
-    .typeText(this.passwordInput, password)
-    .click(this.loginButton)
+        await t.click(this.showLogin)
+        if(username !=null && password != null){
+            await t.typeText(this.usernameInput, username)
+            await t.typeText(this.passwordInput, password)
+        }
+            await t.click(this.loginButton)
+            await t.wait(1500)
     }
 }
 
-export default new LoginPages
+export default new LoginPage
