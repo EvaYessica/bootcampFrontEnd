@@ -8,7 +8,7 @@ fixture('Login feature test')
     await t.useRole(STANDARD_USER)
 })
 
-test('As a user, I should be able to create a new project, choose any color you like and add it to favorites successfully', async t => {
+test.meta('type','smoke')('As a user, I should be able to create a new project, choose any color you like and add it to favorites successfully', async t => {
     //await t.useRole(STANDARD_USER)
     await ActionPage.createProject(PROJECT.PROJECT_NAME)
     await t .expect(ActionPage.verifyProject.innerText).contains(PROJECT.PROJECT_NAME)

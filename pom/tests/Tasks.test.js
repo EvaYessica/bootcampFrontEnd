@@ -34,7 +34,7 @@ test('As a user, I should be able to create multiple tasks with Today as the due
     }
 })
 
-test('As a user, I should be able to delete every task created after your tests successfully', async t => {
+test.meta('type','smoke')('As a user, I should be able to delete every task created after your tests successfully', async t => {
     //await t.useRole(STANDARD_USER)
     for (let i=1; i<=12; i++){
         await ActionPage.deleteTask()
