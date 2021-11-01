@@ -13,7 +13,7 @@ fixture('Login feature test')
     await t.wait(3000)
 })
 
-test('As a user, I should be able to create a task with Today as the due date successfully', async t => {
+test.meta('type','smoke')('As a user, I should be able to create a task with Today as the due date successfully', async t => {
     //await t.useRole(STANDARD_USER)
     await ActionPage.createTask(TASK.TASK_NAME_TODAY, TASK.TASK_DUEDATE_TODAY)
     await t .expect(ActionPage.inboxTasks.innerText).contains(TASK.TASK_NAME_TODAY)
